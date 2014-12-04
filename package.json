@@ -1,0 +1,22 @@
+{
+  "name": "SIAFeelings",
+  "version": "0.0.1",
+  "description": "A twitter sentiment tracker about SIA",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andremw/SIAFeelings.git"
+  },
+  "author": "andremw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andremw/SIAFeelings/issues"
+  },
+  "homepage": "https://github.com/andremw/SIAFeelings",
+  "dependencies": {
+    "twit": "^1.1.18"
+  }
+}
