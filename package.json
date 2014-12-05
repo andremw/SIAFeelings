@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/andremw/SIAFeelings",
   "dependencies": {
+    "Sentimental": "^1.0.1",
     "twit": "^1.1.18"
   }
 }
