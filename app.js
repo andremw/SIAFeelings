@@ -29,8 +29,10 @@ T.get('search/tweets',
 		tweetCount = data.statuses.length - 1;
 		for (tweetCount; tweetCount >= 0; tweetCount--) {
 			tweetText = data.statuses[tweetCount].text;
-			if (analyzedTweets.indexOf(tweetText))
-			sentimentPoints += sentimentAnalyze(tweetText).score;
+			if (analyzedTweets.indexOf(tweetText) === -1) {
+				sentimentPoints += sentimentAnalyze(tweetText).score;
+				analyzedTweets.push(tweetText);
+			}
 		}
 
 		console.log('----- TWITTER SENTIMENT -----\n');
@@ -46,6 +48,7 @@ var stream = T.stream('statuses/filter', {
 handleNewTweet = function(tweet) {
 	console.log('New tweet.. Hope it sounds kind!');
 	sentimentPoints += sentimentAnalyze(tweet.text).score;
+	analyzedTweets.push(tweet.text);
 	console.log('Now sentiment is %d', sentimentPoints);
 };
 
